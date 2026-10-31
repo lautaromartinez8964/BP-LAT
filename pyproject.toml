@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bp-lat"
+version = "0.1.0"
+description = "Readable Python reference implementation of the BP-LAT SAR thresholding workflow"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "scikit-image>=0.21",
+  "scikit-learn>=1.3",
+  "rasterio>=1.3",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+bp-lat = "bplat.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bplat = ["research_config.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

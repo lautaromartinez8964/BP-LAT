@@ -1,0 +1,7 @@
+# Code provenance
+
+The reusable geometry functions in `src/bplat/research_geometry.py` were extracted from the originating research workspace on 2026-10-31. The source files were `z_flood_robust/scpp2_native_research.py`, `hermes/scripts/run_scpp2_continuous_support_blend_multiprofile_20260831.py`, `hermes/scripts/run_rectangle_multiprofile_l1_e5_20260826.py`, `scripts/experiment_poyang_seed_cross_20261009.py`, `scripts/run_mozambique_single_image_candidates_20260921.py`, `scripts/run_spcat_relative_cross_20261010.py`, `scripts/experiment_nested_bbox_prune_20260913.py`, and `scripts/experiment_m1_e5_variants_20260913.py`. Imports were adapted for the standalone package. Frozen parameters were extracted from the associated native research configuration.
+
+`src/bplat/pipeline.py` adapts the prediction path of `scripts/experiment_native_left_tail_prior_20261030.py` to accept an arbitrary raster path and an explicit input representation. It does not read the original experiment's scoring or scene-specific input modules. `tools/extract_research.py` documents the mechanical extraction and is useful only inside the originating workspace; it is not required to install or run this package.
+
+The originating workspace does not identify a public license for its code. This repository intentionally does not invent one. Project owners must confirm rights and select a license before public redistribution.
